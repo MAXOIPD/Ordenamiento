@@ -1,4 +1,4 @@
-package BubbleSort;
+package Bubble;
 
 import fes.aragon.dinamicos.ListaSimple;
 import fes.aragon.dinamicos.Nodo;

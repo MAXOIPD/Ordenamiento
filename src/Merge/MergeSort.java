@@ -15,7 +15,7 @@ public class MergeSort {
             }else if(j > hi) {
                 lista.asignar(aux.obtenerNodo(i), k);
                 i++;
-            }else if(less(aux.obtenerNodo(j), aux.obtenerNodo(i))) {
+            }else if( less(aux.obtenerNodo(j), aux.obtenerNodo(i)) ) {
                 lista.asignar(aux.obtenerNodo(j), k);
                 j++;
             }else {
@@ -34,14 +34,14 @@ public class MergeSort {
     }
     public static void sort(ListaSimple<Integer> lista) {
         ListaSimple<Integer> aux = new ListaSimple<>();
-        for(int i = 0; i < lista.getLongitud(); i++) {
+        for(int i = 0; i < lista.getLongitud() ; i++) {
             aux.insertar(lista.obtenerNodo(i), i);
         }
         sort(lista, aux, 0, lista.getLongitud() - 1);
     }
 
     private static boolean less(Integer v, Integer w) {
-        return v.doubleValue() < w.doubleValue();
+        return v < w;
     }
 
     public static void main(String[] args) {
