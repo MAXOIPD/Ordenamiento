@@ -23,22 +23,22 @@ public class BubbleSortV {
             return;
         }
         boolean swapped;
-        Nodo<Integer> current;
-        Nodo<Integer> last = null;
+        Nodo<Integer> cabeza;
+        Nodo<Integer> ultimo = null;
 
         do{
             swapped = false;
-            current = lista.cabeza;
-            while(current.next != last) {
-                if(current.valor.compareTo(current.next.valor) > 0) {
-                    Integer temp = current.valor;
-                    current.valor = current.next.valor;
-                    current.next.valor = temp;
+            cabeza = lista.cabeza;
+            while(cabeza.next != ultimo) {
+                if(cabeza.valor.compareTo(cabeza.next.valor) > 0) {
+                    Integer temp = cabeza.valor;
+                    cabeza.valor = cabeza.next.valor;
+                    cabeza.next.valor = temp;
                     swapped = true;
                 }
-                current = current.next;
+                cabezat = cabeza.next;
             }
-            last = current;
+            ultimo = cabeza;
         }while(swapped);
     }
 }
